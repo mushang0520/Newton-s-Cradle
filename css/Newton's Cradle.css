@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#warp{
+    position: relative;
+    background-color: #aaa;
+    width: 600px;
+    height: 350px;
+    top: 50px;
+    left:calc(50% - 350px);
+
+}
+#warp .center{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left:300px;
+    z-index: 1;
+}
+#warp .line{
+    height: 2px;
+    width: 320px;
+    background-color: #ccc;
+    position: absolute;
+    top:5px;
+    left:305px;
+    transform-origin: left;
+}
+#warp .ball{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top:300px;
+    background-color: #000;
+    border-radius: 50%;
+}
+#warp .d2{
+    transform: rotate(95deg);
+}
+#warp .d3{
+    transform: rotate(90deg);
+}
+#warp .d4{
+    transform: rotate(85deg);
+}
+#warp .d5{
+    transform: rotate(79deg);
+}
+#warp .s1{
+    left:230px
+}
+#warp .s2{
+    left:260px
+}
+#warp .s3{
+    left:290px
+}
+#warp .s4{
+    left:320px
+}
+#warp .s5{
+    left:350px
+}
+#warp .s1{
+    transform-origin: 45px -295px;
+
+    animation-name: mymove1;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+}
+#warp .d1{
+    counter-increment: a;
+    transform: rotate(101deg);
+
+    animation-name: mymove;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+}
+#warp .s5{
+    transform-origin: -45px -295px;
+
+    animation-name: move1;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+}
+#warp .d5{
+    counter-increment: b;
+
+    animation-name: move;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count:infinite;
+
+}
+
+@keyframes mymove{
+    from{transform: rotate(101deg);
+    animation-timing-function: cubic-bezier(0,.74,.6,.92);}
+    25%{transform: rotate(131deg);
+        animation-timing-function: cubic-bezier(.37,.02,.98,.52);}
+    50%{transform: rotate(101deg); }
+    to{transform: rotate(101deg); }
+
+ }
+@keyframes mymove1{
+    from{transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0,.74,.6,.92);}
+    25%{transform: rotate(30deg);
+        animation-timing-function: cubic-bezier(.37,.02,.98,.52);}
+    50%{transform: rotate(0deg);}
+    to{transform: rotate(0deg);}
+}
+@keyframes move1{
+    from{transform: rotate(0deg);}
+    50%{transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0,.74,.6,.92);}
+    75%{transform: rotate(-30deg);
+        animation-timing-function: cubic-bezier(.37,.02,.98,.52);}
+    to{transform: rotate(0deg); }
+}
+@keyframes move{
+
+    from{transform: rotate(79deg);}
+    50%{transform: rotate(79deg);
+        animation-timing-function: cubic-bezier(0,.74,.6,.92);}
+    75%{transform: rotate(49deg);
+    animation-timing-function: cubic-bezier(.37,.02,.98,.52);}
+    to{transform: rotate(79deg); }
+}
